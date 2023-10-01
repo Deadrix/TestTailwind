@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr" class="font-manrope">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../dist/output.css" rel="stylesheet">
+    <title>Robbie Lens | {% block title %}{% endblock %}</title>
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+<header class="flex justify-between items-center px-14 py-5">
+    <a href="">
+        <img src="../images/logo.png" alt="">
+    </a>
+    <nav class="grid grid-rows-1 grid-cols-3 gap-8">
+        <a href="../routes/Accueil.php">Accueil</a>
+        <a href="../routes/Propos.php">Propos</a>
+        <a href="../routes/Portfolio.php">Portfolio</a>
+    </nav>
+</header>
+
+<main class="flex-1">
+    {% block main %}{% endblock %}
+</main>
+
+<footer class="flex justify-between items-center px-14 py-5">
+    <a href="">
+        <img src="../images/logo.png" alt="">
+    </a>
+    <nav class="grid grid-rows-1 grid-cols-2 gap-8">
+        <a href="#"><img src="../images/twitter.png" alt=""></a>
+        <a href="#"><img src="../images/instagram.png" alt=""></a>
+    </nav>
+</footer>
+
+</body>
+</html>
