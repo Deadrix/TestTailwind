@@ -1,0 +1,64 @@
+{% extends 'base.twig' %}
+
+{% block title %}À propos{% endblock %}
+
+{% block main %}
+
+    <section id="a_propos" class="bg-dark-blue text-white">
+
+        <div class="container mx-auto p-20 flex flex-col items-center">
+            <h1 class="text-accueil-title font-montserrat font-bold text-6xl mb-4">À propos</h1>
+            <div class="flex flex-col items-center p-12">
+                <p>
+                    Photographe depuis plus de 5 ans, je réalise des reportages aux photos dynamiques et pertinentes
+                    pour
+                    vos
+                    projets de communication. Créativité, qualité, et sérénité pour vous! Je gère tout, depuis la
+                    direction
+                    artistique, la réalisation du reportage jusqu’à la livraison de vos photos retouchées, prêtes à
+                    l’emploi.
+                </p>
+                <h2 class="text-2xl mt-7 mb-20 font-bold">Services</h2>
+                <ul class="list-disc list-inside self-start">
+                    <li>Portrait seul ou à plusieurs</li>
+                    <li>Shooting mode</li>
+                    <li>Retouches sur mesure</li>
+                    <li>Développement</li>
+                </ul>
+
+                <a href="../routes/Portfolio.php" class="flex w-full justify-center">
+                    <button class="text-white rounded-full py-5 px-7 uppercase bg-gradient-to-b from-button-start to-button-end hover:from-button-start-hover hover:to-button-end-hover">
+                        Voir mon portfolio
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="tarifs" class="bg-dark-blue text-white p-20">
+        <table class="w-full text-center border border-slate-500">
+            <thead>
+            <tr>
+                <th class="p-3.5 border border-slate-500">Désignation</th>
+                <th class="p-3.5 border border-slate-500">Quantité</th>
+                <th class="p-3.5 border border-slate-500">Prix</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="p-20 border border-slate-500">Retouches photo studio professionnel</td>
+                <td class="p-20 border border-slate-500">x 800 photos</td>
+                <td class="p-20 border border-slate-500">3 200€/800 photos</td>
+            </tr>
+            <tr>
+                <td class="p-20 border border-slate-500">Assistant photo lumière professionnel</td>
+                <td class="p-20 border border-slate-500">x 2 sets studio</td>
+                <td class="p-20 border border-slate-500">1 500€/journée</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    </section>
+
+{% endblock %}
