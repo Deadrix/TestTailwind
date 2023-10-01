@@ -1,0 +1,74 @@
+{% extends 'base.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block main %}
+
+    <section id="presentation" class="bg-dark-blue">
+        <div class="container mx-auto flex p-20">
+            <div class="pr-20 flex-grow">
+                <h1 class="text-accueil-title font-montserrat font-bold text-6xl mb-4">Robbie Lens <br> Photographe</h1>
+                <p class="text-white text-lg mb-7">Où <span class="text-accueil-title">professionalisme</span> s’allie
+                    avec
+                    <span class="text-accueil-title">passion</span>. Depuis plus de 5 ans maintenant, j’exerce
+                    mon métier avec la
+                    passion qui m’anime : capturer l’essence de chaque instant.
+                </p>
+                <a href="#contact">
+                    <button class="text-white rounded-full py-5 px-7 uppercase bg-gradient-to-b from-button-start to-button-end hover:from-button-start-hover hover:to-button-end-hover">
+                        Un projet ? Écrivez-moi
+                    </button>
+                </a>
+            </div>
+            <div class="flex-shrink-0">
+                <img src="../images/robbie-lens.png" alt="" class="w-419 h-425 object-cover">
+            </div>
+        </div>
+    </section>
+
+    <section id="dernier_projet">
+        <div class="container mx-auto p-20">
+            <h2 class="text-2xl font-bold text-center mb-20">Mon dernier projet</h2>
+            <div class="grid grid-rows-2 grid-cols-3 gap-4">
+                {% for i in 1..6 %}
+                    <img src="../images/accueil/element-{{ i }}.png" alt="" class="w-full">
+                {% endfor %}
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact" class="bg-dark-blue">
+        <div class="container mx-auto p-20 text-white">
+            <h2 class="mb-12 text-center text-accueil-title text-2xl font-bold">Parlons de votre projet</h2>
+            <form action="">
+
+                <div class="flex gap-5 mb-5">
+                    <div class="flex flex-col w-full">
+                        <label for="nom" class="mb-2.5">nom</label>
+                        <input type="text" id="nom" class="rounded-md p-2.5">
+                    </div>
+
+                    <div class="flex flex-col w-full">
+                        <label for="email" class="mb-2.5">email</label>
+                        <input type="email" id="email" class="rounded-md p-2.5">
+                    </div>
+                </div>
+
+                <div class="flex flex-col mb-7">
+                    <label for="message" class="mb-2.5">message</label>
+                    <textarea id="message" class="rounded-md p-2.5"></textarea>
+                </div>
+
+                <div class="flex justify-center">
+                    <input type="submit" id="submit" value="Envoyer"
+                           class="text-white rounded-full py-5 px-7 w-52 uppercase bg-gradient-to-b from-button-start to-button-end hover:from-button-start-hover hover:to-button-end-hover">
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+{% endblock %}
+
+
