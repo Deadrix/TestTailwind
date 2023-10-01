@@ -1,0 +1,33 @@
+{% extends 'base.twig' %}
+
+{% block title %}À propos{% endblock %}
+
+{% block main %}
+
+    <section id="titre" class="bg-dark-blue p-20">
+        <h1 class="text-accueil-title font-montserrat font-bold text-6xl">Portfolio</h1>
+    </section>
+
+    <section id="paysage" class="px-20 pt-20">
+        <h2 class="mb-20 text-2xl font-bold">Paysages</h2>
+        <div class="grid grid-cols-3 grid-rows-3 gap-3.5 w-full">
+            {% for i in 1..9 %}
+                <a href="../images/portfolio/paysage{{ i }}.jpg">
+                    <img src="../images/portfolio/paysage{{ i }}.jpg" alt="" class="h-[300px] w-full object-cover">
+                </a>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section id="portrait" class="px-20 p-20">
+        <h2 class="mb-20 text-2xl font-bold">Portraits</h2>
+        <div class="grid grid-cols-3 grid-rows-2 gap-3.5 w-full">
+            {% for i in 1..6 %}
+                <a href="../images/portfolio/portrait{{ i }}.jpg">
+                    <img src="../images/portfolio/portrait{{ i }}.jpg" alt="" class="h-[300px] w-full object-cover">
+                </a>
+            {% endfor %}
+        </div>
+    </section>
+
+{% endblock %}
